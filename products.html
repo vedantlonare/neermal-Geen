@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | Neermal Green</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9f8;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soil-shadow {
+            box-shadow: 0 4px 20px -2px rgba(30, 70, 32, 0.08);
+        }
+        .product-card-hover:hover {
+            box-shadow: 0 10px 30px -4px rgba(30, 70, 32, 0.12);
+            transform: translateY(-4px);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002105",
+                    "secondary-container": "#c4ef48",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f3",
+                    "tertiary": "#3b2119",
+                    "outline-variant": "#c2c9bd",
+                    "tertiary-fixed": "#ffdbd1",
+                    "outline": "#72796f",
+                    "on-tertiary-fixed-variant": "#5f3f36",
+                    "on-secondary-fixed": "#161f00",
+                    "on-surface-variant": "#424940",
+                    "secondary-fixed": "#c6f24b",
+                    "surface-container-high": "#e7e8e7",
+                    "primary-fixed-dim": "#a4d29f",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1c",
+                    "surface-dim": "#d9dad9",
+                    "on-secondary-container": "#526b00",
+                    "on-secondary-fixed-variant": "#3b4d00",
+                    "tertiary-container": "#54362d",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f8",
+                    "surface-container-highest": "#e1e3e2",
+                    "inverse-primary": "#a4d29f",
+                    "on-tertiary-fixed": "#2d150e",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "background": "#f9f9f8",
+                    "on-primary-container": "#87b483",
+                    "surface-container": "#edeeed",
+                    "on-tertiary-container": "#c99f93",
+                    "primary-fixed": "#c0efba",
+                    "primary": "#052f0c",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#274f28",
+                    "inverse-on-surface": "#f0f1f0",
+                    "surface-bright": "#f9f9f8",
+                    "surface-variant": "#e1e3e2",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#1e4620",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e9bcb0",
+                    "surface-tint": "#3f683e",
+                    "secondary": "#4f6600",
+                    "on-surface": "#191c1c",
+                    "inverse-surface": "#2e3131",
+                    "secondary-fixed-dim": "#abd52e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "base": "8px",
+                    "gutter": "20px",
+                    "lg": "40px",
+                    "margin": "24px",
+                    "xs": "4px",
+                    "xl": "64px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "h3": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "caption": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 border-b border-outline-variant bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin py-sm max-w-[1280px] mx-auto">
+<div class="flex items-center gap-lg">
+<a class="font-h2 text-h2 font-bold text-primary tracking-tight" href="/">Neermal Green</a>
+<nav class="hidden lg:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/about.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/services.html">Services</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary-fixed pb-1" href="/products.html">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/blog.html">Blog</a>
+
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<button class="hidden sm:flex font-label-md text-label-md text-on-surface-variant hover:text-secondary px-base py-xs transition-all duration-200" onclick="window.location.href='/contact.html'">Contact</button>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-md py-base rounded-lg active:scale-95 transition-transform duration-150">Farmers Welfare</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin py-lg">
+<!-- Hero Search Section -->
+<section class="mb-xl relative rounded-xl overflow-hidden min-h-[300px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Sustainable farming supplies background" class="w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida/ADBb0ugNd0uqcNBlMLhAVNmYS_qfs81x_Ra_hxF6kHbw8qMlGwg5ch62wumG4ryFqrJlZITCdAE4GrONQZxwxDfmWKgOugZfqK5SIolW0-4s06Hnfvqn2Vv-9aDPNFAEiOeQTcRHAs4LVqMrKWUM0qJ-J4_CuZUQHtZzxwQzT79L_VjNWOLaKAjOIe5tg8cIt8e4OOjz-pwUls7ktBJygPV3xCQDa4wiTFv1HWqRXwf6yfAxV46D1V_sfrxzCs4SXGKRx3t467D6V_YueLc"/>
+</div>
+<div class="relative z-10 w-full px-lg text-white">
+<h1 class="font-h1 text-h1 mb-md max-w-2xl text-white">Sustainable Agriculture Solutions</h1>
+<div class="flex flex-col md:flex-row gap-base max-w-3xl">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-base top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-xl pr-md py-md bg-surface-container-lowest text-on-surface border-none rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none" placeholder="Search for seeds, tools, or organic fertilizers..." type="text"/>
+</div>
+<button class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-lg py-md rounded-lg flex items-center justify-center gap-base active:scale-95 transition-all">
+<span class="material-symbols-outlined">filter_list</span>
+                        Search Catalog
+                    </button>
+</div>
+</div>
+</section>
+<!-- Category Pills -->
+<div class="flex gap-sm overflow-x-auto pb-md mb-lg no-scrollbar">
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md text-label-md whitespace-nowrap">All Products</button>
+<button class="bg-surface-container text-on-surface-variant px-lg py-sm rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 ease-in-out">Organic Seeds</button>
+<button class="bg-surface-container text-on-surface-variant px-lg py-sm rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 ease-in-out">Natural Fertilizers</button>
+<button class="bg-surface-container text-on-surface-variant px-lg py-sm rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 ease-in-out">Precision Tools</button>
+<button class="bg-surface-container text-on-surface-variant px-lg py-sm rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 ease-in-out">Bio-Pesticides</button>
+<button class="bg-surface-container text-on-surface-variant px-lg py-sm rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 ease-in-out">Irrigation Kits</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High-resolution studio shot of organic heirloom tomato seeds in a kraft paper package with minimalist green branding. The lighting is soft and natural, emphasizing the texture of the paper and the vibrancy of the green logo against a neutral gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_UAB3tltyor9BRxg3Qq6uB7WBcZTqv3pzEgNmVA_n4J1JA1y8LGcbd4M790U1C4fHcziVUueSFwppfXz_ZjkVLUg3VtAa3I0GDpejuml22eGCiBOd1V6jlah-xBlxP6AbPh8ULeXJQXyJwNbfNCg6qXiJ8o5mdNLdgMznh9mpk-HKqzFe2562A5PqwHNpPMQO3PJb_mENPOnOXb5m0tAZCgj88BLJjl3hsrMskn25jy3GTgMTHy9yIOm80wMwkLlzi86i5qKiUi04"/>
+<span class="absolute top-sm left-sm bg-secondary-container text-on-secondary-container text-caption px-base py-xs rounded-full font-label-md">Best Seller</span>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Seeds</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Heirloom Tomato Seeds</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">High-yield, organic seeds sourced from sustainable rural farms across India.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹249</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of a premium bio-fertilizer container featuring a deep green label with gold leaf accents. The setting is a clean, modern lab interior with soft morning sunlight streaming through a window, casting gentle shadows and reflecting the company's commitment to scientific agriculture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu3fe2xZBRMjnZ9qMNYMngzxrfT0mHy2LBqaWA7Hd5ioz9EMDb0X6RlTtRDlJGzZ9bJ1cBUPofFL-e8Fq2yTVQ3cTYE_s7QMHiRWDfNHt9ZUYjBmCi7y3fE2HHn5t-B7MPWE3LNWW2yh7WY-3ARcXF1PEXqXK5BAIfQ7iNJk03ZVAOMW6Dut9hlYWqXcy0TyyM5GcW_ngmOJ0MsK8Kp26ZnetuLWJ87d0e-9ylKMy09cL4kUQH9m1tJOzIudnEDr_8doli73H2yxv3"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Fertilizer</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Neem-Powered Bio Booster</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">100% organic soil enricher that promotes rapid root growth and pest resistance.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹899</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional-grade ergonomic hand trowel with a polished stainless steel head and a sustainable bamboo handle. The tool rests on a textured stone surface in an outdoor garden at dusk, with soft ambient lighting highlighting the metallic sheen and organic wood grain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYYAorFpYzGV8KsnpnVq8y__dugeFlXbz8M2UF4q_GeUwx4jDPlY_7cXEPFHTbIjQzui96tF4XKc_biuprIzcr1Uf0Oq7mRoBaIx1OAqtKg9nPD-cR2dSlX_QwIif4sw0c7eBvNzLOEJ3nmTWQ1wz47Etk3548baTV_udM-tOrvZulMjDCCha9sOP7OlysVk6aMLZDzGi-uqBwpUBALFqifYI_QyBkp1-XtgsadsoVjPXd1Rk3caKaX2dihd3sd2ygH-D5WI9W_Vop"/>
+<span class="absolute top-sm left-sm bg-tertiary-fixed text-on-tertiary-fixed-variant text-caption px-base py-xs rounded-full font-label-md">New Arrival</span>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Tools</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Ergo-Grip Trowel</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">Precision-balanced garden trowel with high-grade carbon steel for durability.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹1,250</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Eco-friendly liquid pest control spray bottle made from recycled plastics. The bottle is positioned on a rustic wooden table surrounded by lush green leaves, suggesting its harmony with nature. The lighting is bright and airy, typical of a professional product catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbfB1Deih8A8feA3Uj3IACiC61DA1lFFZZomtWvTcLu4Lbwif2cYdH_EcIch0c7-sIBfK09ZTjMus66cbjAiDTtf4JEQAIht6ulV2sYaUTkiQwErWmloHoJUAq9PdSlqxZuSBXP3g3TGBsG85QaHhf-JiTpee9AlctwHyc2io7pya7zYnoFzMsj8l3xV2a_wOmWDM_pCd6DggKbUPFF7cXV59dFHPU3pvnNnBH8VLoxUI5zSaYaOvajk7xqDvEGo3RlWayx-tdN0GV"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Protection</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Guardian Bio-Shield Spray</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">Natural repellent formula effective against 20+ types of common garden pests.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹550</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 5 (Bento Row Start) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A smart drip irrigation starter kit displayed in an organized, flat-lay composition on a clean white background. Components including tubes, nozzles, and a digital timer are arranged neatly, showcasing technical precision and modern agricultural efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhLI-m6ve-QOa77jbp1m8kI9iU1sZR5mMPUDLyJ--qsu9UVdElrH3BlRm9xIBcQmq2EukHnRrzV-z0I5wj4-8Iy16nKPVjzn9lxM5lfv1xghtEP7uvJ-tfA_W2yhPeflIg3yrLyuxwMSmJwSEyLHTSfubIVvfN7YgJw51PeTwmfnB9e8GpZ9Qp1wkObDtm3xCf01TVoilPMVUicvpFWCEnjn90KaASsUVhQAYnx0wPjrZdzqdn_x4kBg4Ma2BSsbhRSAo_Y1RHXGbt"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Irrigation</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Smart Drip Kit (50m)</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">Conserve water while maximizing yield with our automated drip system.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹3,499</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Premium dark, rich vermicompost displayed inside a clear glass container to show its high-quality granular texture. The compost is surrounded by small sprouts, emphasizing the vitality and growth it provides. The mood is earthy, honest, and organic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaweYsoIJGjtp3mJkQT8Kz4ATT4b4a1ceulvc6phZxCr_gdyjdabJD9OG0cmZbQmPtOWhEC0kuGqZIwpxdRuEjjdd0aDOMY6oe5685Gb3pt-PSbVRdcOf_DwHcx4bCyh84o7fv43Al0WU2XX7vvL9W6b2bZj1Np-xDSkVpXhQfSe9S_RiHnBtVfhFZx-pLAg1CyYGPzu6Wk7CvUkMkfpqUpYKkY1ByBZqTJUcIiD8iP_NtKe1u8F95hq17IDVenF2FJZnA4CBNp7w1"/>
+<span class="absolute top-sm right-sm bg-secondary-container text-on-secondary-container text-caption px-base py-xs rounded-full font-label-md">Eco-Choice</span>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Organic</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Premium Vermicompost</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">Triple-sifted, nutrient-rich earthworm castings for organic vegetable gardening.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹450</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Heavy-duty gardening gloves made from high-quality tan leather and breathable green fabric. The gloves are shown in action, being worn by a person holding a small sapling, creating a human-centric feel that emphasizes the connection between technology and the soil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLuYY8TbK_N5fQDuoLZoP1AHilSWdZrh0a01QlBYNuiIJk_i6oQNGW3Xt0rg1iMeB3qUDad6-Me_dS6vvUBRxUn_L5WxSDOfc9r1UR-iJAOWtpOtCUOm4fkEER24ZN4NXYbC2uBX6MX6vOrMdv-xbPb83njdqHoaKbGyYj4q2xHwH8D05ubpObMXxomGFEcJ7CmxMpcoog4NnPIRUKD06KkIhDaE6XCK7tPSFN9ss21W5JD56RNO_SGUXOkMK-JV8l9xASxER9Dkqa"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Apparel</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Pro-Shield Farm Gloves</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">Thorn-proof leather palms with breathable mesh back for all-day comfort.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹750</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col product-card-hover transition-all duration-300 soil-shadow">
+<div class="aspect-square bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A lush tray of vibrant green microgreens growing in a sleek, modern indoor kit. The image is shot from a low angle with a shallow depth of field, making the tiny leaves pop against a soft-focus kitchen background. The aesthetic is clean, healthy, and innovative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOK1OAQ7z-STvILWHkOcRlF-QA9UBCHrist67f1LUhJhrZeO6ytrTPMmyu9rHR6kGtAcpsSyQXQQsyZIb4k77tUTCvuGXt6BtQ091w2jBc10WM5djIcL6ArArB9ykZhcY8-QP554xMF-W1Yp5St9RZh9Xs3L-632NdAYEPDQaleh-zT5N5poLxygXgzUtn_s-WHO-vg7ZNhqLR7c3L2jFEVPsgqv_rF5bg39ZjXfLkImO5Av1T7x4OMbZtMjyhbMgUe6zwURYma87e"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex items-center gap-xs mb-xs">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Indoor</span>
+</div>
+<h3 class="font-h3 text-body-lg text-on-surface mb-xs">Microgreens Starter Kit</h3>
+<p class="text-on-surface-variant font-body-md text-caption line-clamp-2 mb-md">Everything you need to grow nutrient-dense microgreens on your windowsill.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-h3 text-h3 text-primary">₹1,100</span>
+<button class="bg-primary-container text-on-primary-container p-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-xl flex flex-col items-center">
+<button class="bg-surface-container-highest text-on-surface font-label-md text-label-md px-xl py-md rounded-lg hover:bg-outline-variant transition-all active:scale-95 flex items-center gap-base">
+                View More Products
+                <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-xl pb-lg bg-primary border-t border-primary-container mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin max-w-[1280px] mx-auto">
+<div class="space-y-md">
+<h2 class="font-h3 text-h3 font-bold text-primary-fixed">Neermal Green</h2>
+<p class="font-body-md text-body-md text-on-primary/80">Empowering India's farmers with the technology and tools they need to cultivate a sustainable future.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary-fixed mb-md">Quick Links</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/">Home</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/about.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed font-bold" href="/products.html">Products</a></li>
+<li></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary-fixed mb-md">Support</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/services.html">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/contact.html">Contact</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/blog.html">Blog</a></li>
+<li><a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/">Farmers Welfare Program</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary-fixed mb-md">Newsletter</h4>
+<p class="font-caption text-caption text-on-primary/80 mb-md">Stay updated on sustainable farming tips and new arrivals.</p>
+<div class="flex flex-col gap-sm">
+<input class="bg-primary-container border-none text-on-primary-container rounded-lg px-md py-sm focus:ring-2 focus:ring-secondary-fixed outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md px-md py-sm rounded-lg hover:opacity-80 transition-opacity">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin pt-xl mt-xl border-t border-primary-container/30 text-center">
+<p class="font-caption text-caption text-on-primary/60">© 2024 Neermal Green. Cultivating Sustainable Futures for Rural India.</p>
+</div>
+</footer>
+</body></html>
