@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002105",
+                    "secondary-container": "#c4ef48",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f3",
+                    "tertiary": "#3b2119",
+                    "outline-variant": "#c2c9bd",
+                    "tertiary-fixed": "#ffdbd1",
+                    "outline": "#72796f",
+                    "on-tertiary-fixed-variant": "#5f3f36",
+                    "on-secondary-fixed": "#161f00",
+                    "on-surface-variant": "#424940",
+                    "secondary-fixed": "#c6f24b",
+                    "surface-container-high": "#e7e8e7",
+                    "primary-fixed-dim": "#a4d29f",
+                    "error": "#ba1a1a",
+                    "on-background": "#191c1c",
+                    "surface-dim": "#d9dad9",
+                    "on-secondary-container": "#526b00",
+                    "on-secondary-fixed-variant": "#3b4d00",
+                    "tertiary-container": "#54362d",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f8",
+                    "surface-container-highest": "#e1e3e2",
+                    "inverse-primary": "#a4d29f",
+                    "on-tertiary-fixed": "#2d150e",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "background": "#f9f9f8",
+                    "on-primary-container": "#87b483",
+                    "surface-container": "#edeeed",
+                    "on-tertiary-container": "#c99f93",
+                    "primary-fixed": "#c0efba",
+                    "primary": "#052f0c",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#274f28",
+                    "inverse-on-surface": "#f0f1f0",
+                    "surface-bright": "#f9f9f8",
+                    "surface-variant": "#e1e3e2",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#1e4620",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e9bcb0",
+                    "surface-tint": "#3f683e",
+                    "secondary": "#4f6600",
+                    "on-surface": "#191c1c",
+                    "inverse-surface": "#2e3131",
+                    "secondary-fixed-dim": "#abd52e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "base": "8px",
+                    "gutter": "20px",
+                    "lg": "40px",
+                    "margin": "24px",
+                    "xs": "4px",
+                    "xl": "64px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "h3": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "caption": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .soil-shadow { box-shadow: 0 10px 30px -10px rgba(30, 70, 32, 0.08); }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 border-b border-outline-variant bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin py-sm max-w-[1280px] mx-auto">
+<div class="font-h2 text-h2 font-bold text-primary tracking-tight">Neermal Green</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/about.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/products.html">Products</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/blog.html">Blog</a>
+
+<a class="font-label-md text-label-md text-primary border-b-2 border-secondary-fixed pb-1" href="/contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-base">
+<button class="bg-primary text-on-primary px-md py-xs rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">Farmers Welfare</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary-container py-xl overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-margin relative z-10 grid md:grid-cols-2 gap-lg items-center">
+<div class="space-y-md">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-md">Connect With Us</span>
+<h1 class="font-h1 text-h1 text-on-primary leading-tight">Cultivating Conversations for a Greener Tomorrow</h1>
+<p class="font-body-lg text-body-lg text-on-primary/80 max-w-xl">Whether you're a farmer looking for sustainable solutions or a partner interested in rural innovation, our team is here to support your growth.</p>
+</div>
+<div class="relative">
+<div class="rounded-xl overflow-hidden soil-shadow aspect-[1.26] border border-outline-variant/20">
+<img alt="Lush green agricultural landscape" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugNd0uqcNBlMLhAVNmYS_qfs81x_Ra_hxF6kHbw8qMlGwg5ch62wumG4ryFqrJlZITCdAE4GrONQZxwxDfmWKgOugZfqK5SIolW0-4s06Hnfvqn2Vv-9aDPNFAEiOeQTcRHAs4LVqMrKWUM0qJ-J4_CuZUQHtZzxwQzT79L_VjNWOLaKAjOIe5tg8cIt8e4OOjz-pwUls7ktBJygPV3xCQDa4wiTFv1HWqRXwf6yfAxV46D1V_sfrxzCs4SXGKRx3t467D6V_YueLc"/>
+</div>
+</div>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-fixed opacity-5 skew-x-12 translate-x-1/2"></div>
+</section>
+<!-- Main Content: Bento Grid Layout -->
+<section class="max-w-[1280px] mx-auto px-margin py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Contact Form: Takes 7 columns -->
+<div class="md:col-span-7 bg-white rounded-xl border border-outline-variant p-lg soil-shadow">
+<h2 class="font-h2 text-h2 text-primary mb-md">Send us a message</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-outline">Full Name</label>
+<input class="bg-surface-container-low border-b border-outline focus:border-primary focus:ring-0 transition-all px-sm py-base" placeholder="Arjun Singh" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-outline">Email Address</label>
+<input class="bg-surface-container-low border-b border-outline focus:border-primary focus:ring-0 transition-all px-sm py-base" placeholder="arjun@example.com" type="email"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-xs">
+<label class="font-label-md text-outline">Subject</label>
+<select class="bg-surface-container-low border-b border-outline focus:border-primary focus:ring-0 transition-all px-sm py-base appearance-none">
+<option>Sustainable Farming Consultation</option>
+<option>Product Inquiry</option>
+<option>Careers</option>
+<option>Other</option>
+</select>
+</div>
+<div class="md:col-span-2 flex flex-col gap-xs">
+<label class="font-label-md text-outline">Message</label>
+<textarea class="bg-surface-container-low border-b border-outline focus:border-primary focus:ring-0 transition-all px-sm py-base" placeholder="How can we help your farm today?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-sm">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-xl py-md rounded-lg font-h3 hover:bg-secondary-fixed-dim transition-all duration-300 ease-in-out w-full md:w-auto" type="submit">
+                                Send Message
+                            </button>
+</div>
+</form>
+</div>
+<!-- Contact Details: Takes 5 columns -->
+<div class="md:col-span-5 flex flex-col gap-md">
+<!-- Detail Cards -->
+<div class="bg-surface-container-highest rounded-xl p-md border border-outline-variant flex items-start gap-md">
+<div class="bg-primary text-on-primary p-sm rounded-lg">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h3 class="font-label-md text-primary">Headquarters</h3>
+<p class="font-body-md text-on-surface">12 Green Valley Road, Agri-Tech Park<br/>Pune, Maharashtra 411001</p>
+</div>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-md border border-outline-variant flex items-start gap-md">
+<div class="bg-primary text-on-primary p-sm rounded-lg">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<h3 class="font-label-md text-primary">Call Us</h3>
+<p class="font-body-md text-on-surface">+91 1800 456 7890<br/>Mon - Sat, 9:00 AM - 6:00 PM</p>
+</div>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-md border border-outline-variant flex items-start gap-md">
+<div class="bg-primary text-on-primary p-sm rounded-lg">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<h3 class="font-label-md text-primary">Email Support</h3>
+<p class="font-body-md text-on-surface">contact@neermalgreen.com<br/>support@neermalgreen.com</p>
+</div>
+</div>
+<!-- Social Presence -->
+<div class="bg-primary rounded-xl p-lg text-on-primary flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-h3 text-h3 mb-sm">Follow Our Journey</h3>
+<p class="font-body-md opacity-80 mb-md">Join our growing community of 50,000+ farmers across rural India.</p>
+</div>
+<div class="flex gap-md">
+<div class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-on-primary/10 cursor-pointer transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-on-primary/10 cursor-pointer transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-on-primary/10 cursor-pointer transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="max-w-[1280px] mx-auto px-margin pb-xl">
+<div class="rounded-xl overflow-hidden border border-outline-variant h-[450px] relative soil-shadow">
+<img class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500" data-alt="A clean, high-contrast digital map rendering of Pune, India, emphasizing green spaces and technological hubs. The map uses a sophisticated minimalist style with soft green tones and clear primary-colored markers. The lighting is bright and modern, consistent with a professional corporate design system. Detailed street grids and topographical features are visible through a semi-transparent overlay." data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfRzK_sBGyUs0jXe563shcsrtXMmJqWTgf5nlM1Jk6epW33rue3j-PaRrtTWuLy1K4psWo1PUvORyGR5CWoKDOcs4sDoDs7-xsi6Nj-x9dfw752hB5SlHoDzivpGvFJc0h34RqZcYgtF1tc3yH-P4rqQOc1gUzts3IxBR5vmySYp7B5lfdBicGkfuMcmXT4wgcnd9Hn_nqSHngwMcVjw_IXyNjPPVbgxmVvaGM9WsxrSR1qd5ABpfkF73xKMkf-Q4Af-ErT3uOFYhu"/>
+<div class="absolute bottom-md left-md bg-white p-md rounded-lg soil-shadow border border-outline-variant max-w-xs">
+<h4 class="font-label-md text-primary mb-xs">Find us here</h4>
+<p class="font-caption text-caption text-on-surface-variant">Our innovation hub is located in the heart of Pune's agricultural research district.</p>
+</div>
+</div>
+</section>
+<!-- FAQ CTA -->
+<section class="bg-surface-container-low border-y border-outline-variant py-lg">
+<div class="max-w-[1280px] mx-auto px-margin flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="text-center md:text-left">
+<h2 class="font-h3 text-h3 text-primary">Need immediate answers?</h2>
+<p class="font-body-md text-on-surface-variant">Check our frequently asked questions for quick support.</p>
+</div>
+<button class="bg-white text-primary border border-primary px-xl py-base rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">
+                    View FAQ
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed text-on-primary dark:text-primary-fixed w-full pt-xl pb-lg border-t border-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin max-w-[1280px] mx-auto">
+<div class="md:col-span-1">
+<div class="font-h3 text-h3 font-bold text-primary-fixed dark:text-primary-fixed-dim mb-md">Neermal Green</div>
+<p class="font-caption text-caption opacity-80 mb-md">Empowering the roots of our nation through innovative technology and sustainable practices.</p>
+</div>
+<div>
+<h4 class="font-label-md text-secondary-fixed mb-md">Quick Links</h4>
+<ul class="flex flex-col gap-sm">
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/">Home</a></li>
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/about.html">About</a></li>
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/services.html">Services</a></li>
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/products.html">Products</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-secondary-fixed mb-md">Resources</h4>
+<ul class="flex flex-col gap-sm">
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/blog.html">Blog</a></li>
+<li></li>
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/contact.html">Contact</a></li>
+<li><a class="font-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/">Farmers Welfare Program</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-secondary-fixed mb-md">Newsletter</h4>
+<p class="font-caption text-caption opacity-80 mb-base">Subscribe for the latest agri-updates.</p>
+<div class="flex gap-xs">
+<input class="bg-on-primary-fixed border-none rounded px-sm py-xs text-on-primary w-full text-caption" placeholder="Email" type="email"/>
+<button class="bg-secondary-fixed text-on-secondary-fixed px-sm rounded">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin mt-xl pt-md border-t border-primary-container text-center">
+<p class="font-caption text-caption opacity-60">© 2024 Neermal Green. Cultivating Sustainable Futures for Rural India.</p>
+</div>
+</footer>
+</body></html>
