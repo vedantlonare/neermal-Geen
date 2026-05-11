@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soil-shadow {
+            box-shadow: 0 4px 20px -2px rgba(30, 70, 32, 0.08);
+        }
+        .horizon-input:focus {
+            border-bottom: 2px solid #052f0c;
+            outline: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#002105",
+                        "secondary-container": "#c4ef48",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f3",
+                        "tertiary": "#3b2119",
+                        "outline-variant": "#c2c9bd",
+                        "tertiary-fixed": "#ffdbd1",
+                        "outline": "#72796f",
+                        "on-tertiary-fixed-variant": "#5f3f36",
+                        "on-secondary-fixed": "#161f00",
+                        "on-surface-variant": "#424940",
+                        "secondary-fixed": "#c6f24b",
+                        "surface-container-high": "#e7e8e7",
+                        "primary-fixed-dim": "#a4d29f",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1c",
+                        "surface-dim": "#d9dad9",
+                        "on-secondary-container": "#526b00",
+                        "on-secondary-fixed-variant": "#3b4d00",
+                        "tertiary-container": "#54362d",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f8",
+                        "surface-container-highest": "#e1e3e2",
+                        "inverse-primary": "#a4d29f",
+                        "on-tertiary-fixed": "#2d150e",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f8",
+                        "on-primary-container": "#87b483",
+                        "surface-container": "#edeeed",
+                        "on-tertiary-container": "#c99f93",
+                        "primary-fixed": "#c0efba",
+                        "primary": "#052f0c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#274f28",
+                        "inverse-on-surface": "#f0f1f0",
+                        "surface-bright": "#f9f9f8",
+                        "surface-variant": "#e1e3e2",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#1e4620",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#e9bcb0",
+                        "surface-tint": "#3f683e",
+                        "secondary": "#4f6600",
+                        "on-surface": "#191c1c",
+                        "inverse-surface": "#2e3131",
+                        "secondary-fixed-dim": "#abd52e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "base": "8px",
+                        "gutter": "20px",
+                        "lg": "40px",
+                        "margin": "24px",
+                        "xs": "4px",
+                        "xl": "64px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "caption": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 border-b border-outline-variant bg-surface/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin py-sm max-w-[1280px] mx-auto">
+<div class="font-h2 text-h2 font-bold text-primary dark:text-primary-fixed tracking-tight">Neermal Green</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/about.html">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:-translate-y-1 transition-all duration-300 ease-in-out" href="/products.html">Products</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-secondary-fixed pb-1" href="/blog.html">Blog</a>
+
+</nav>
+<div class="flex items-center gap-sm">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all active:scale-95" onclick="window.location.href='/contact.html'">Contact</button>
+<button class="bg-primary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95">Farmers Welfare</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin py-xl">
+<!-- Hero Section: Featured Article -->
+<section class="mb-xl">
+<div class="relative w-full rounded-xl overflow-hidden aspect-[21/9] soil-shadow flex items-center">
+<img alt="Featured Article Image" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugNd0uqcNBlMLhAVNmYS_qfs81x_Ra_hxF6kHbw8qMlGwg5ch62wumG4ryFqrJlZITCdAE4GrONQZxwxDfmWKgOugZfqK5SIolW0-4s06Hnfvqn2Vv-9aDPNFAEiOeQTcRHAs4LVqMrKWUM0qJ-J4_CuZUQHtZzxwQzT79L_VjNWOLaKAjOIe5tg8cIt8e4OOjz-pwUls7ktBJygPV3xCQDa4wiTFv1HWqRXwf6yfAxV46D1V_sfrxzCs4SXGKRx3t467D6V_YueLc"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+<div class="relative z-10 px-xl max-w-2xl text-on-primary">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-md text-label-md mb-md">Featured News</span>
+<h1 class="font-h1 text-h1 mb-sm leading-tight">Empowering Rural India through Sustainable Agri-Tech</h1>
+<p class="font-body-lg text-body-lg mb-lg opacity-90 text-surface-container-lowest">Discover how our latest irrigation solutions are doubling crop yields for small-scale farmers in Vidarbha.</p>
+<button class="bg-secondary-container text-on-secondary-container px-lg py-md rounded-lg font-label-md text-label-md hover:bg-secondary-fixed transition-all flex items-center gap-sm">
+                        Read More <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Newsletter & Search Bar Section -->
+<section class="mb-xl grid grid-cols-1 md:grid-cols-12 gap-lg items-center bg-surface-container rounded-xl p-lg">
+<div class="md:col-span-7">
+<h3 class="font-h3 text-h3 text-primary mb-xs">Stay Rooted in Knowledge</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Get weekly farming tips and industry updates delivered to your inbox.</p>
+</div>
+<div class="md:col-span-5 flex gap-sm">
+<input class="flex-grow bg-surface-container-lowest border-0 border-b-2 border-outline-variant horizon-input px-sm font-body-md" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:opacity-90 transition-all">Subscribe</button>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Latest News (Bento Grid Style) -->
+<div class="lg:col-span-8">
+<div class="flex justify-between items-end mb-lg border-b border-outline-variant pb-base">
+<h2 class="font-h2 text-h2 text-primary">Latest News</h2>
+<a class="font-label-md text-label-md text-secondary hover:underline" href="/">View All News</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- News Card 1 -->
+<article class="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col soil-shadow group cursor-pointer">
+<div class="relative h-48 overflow-hidden">
+<img alt="Crop Field" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A lush green rice paddy field in India during early morning, with soft golden sunlight filtering through the mist. The image has a professional, high-contrast look with deep greens and warm highlights, reflecting a mood of growth and technological vitality in modern agriculture. The composition is clean and focused on the texture of the vibrant crops." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFJ6PBMLfnKv_qTN9e8ie2poGmK2e2SYcV-vLQEyY-n2mRY4aShMDl1qCDInJ7xvlpVWJp1sm16fBtkGMdW-XkD5usfbbL4VzSEIzzS7LtTZ6gogu7Pept4yOKl4wFGtkihFmqT045OwWx07Q1KUrY6HAoW7gIGZGHli9aUdxMkYINmo1w7zUQuK7mMGH2fZxy8kwFelUmJS71jsAltJtG5S-ESXr1oLFuC9a9ziE7SJFjoxWGgAeQQBp-qHsYmG7AYrimQkoyEvj"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex gap-sm mb-sm">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Policy</span>
+<span class="text-on-surface-variant font-caption text-caption">Oct 24, 2024</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-sm group-hover:text-secondary transition-all duration-300 ease-in-out">New Subsidy Program for Drip Irrigation Launched</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-md">The government announces a 40% subsidy increase for smart irrigation systems, a major win for Neermal Green partners.</p>
+<div class="mt-auto pt-sm flex items-center text-primary font-label-md text-label-md">
+                                Read Article <span class="material-symbols-outlined ml-xs text-[18px]">chevron_right</span>
+</div>
+</div>
+</article>
+<!-- News Card 2 -->
+<article class="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col soil-shadow group cursor-pointer">
+<div class="relative h-48 overflow-hidden">
+<img alt="Soil Health" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up of a farmer's weathered hands holding rich, dark organic soil with a small green sprout emerging. The lighting is natural and grounded, focusing on the organic textures and the human-centric aspect of farming. The background is a soft-focus garden, conveying a message of resilience, community, and sustainable agricultural practices." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDejeACasyCHYofLS2Aqdd0czDUoGNr6oMSDNwbBDSYPDqf2S_nJXeQBF5zRBjHlr6aAiJpeOzqHAs6T3FBsFr-h8FQAVPzH2pHBYMcn3d00t4Zmb_kQJ_o7OqKO51C3MG5as6VOcerFri0oiuLsvdIyBX6xCi3F65AzUpdsmcCV_5gVgHf65MmFmdE6U3Lm9ojsMBmQoQMLyt_THy2g9wzNCFX4jkgEOehv8su8xeV3wwyzKycHwTkF27m3BLvPki3ZmJtZRGKy_Xj"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex gap-sm mb-sm">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Awards</span>
+<span class="text-on-surface-variant font-caption text-caption">Oct 20, 2024</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-sm group-hover:text-secondary transition-all duration-300 ease-in-out">Neermal Green Wins 'Innovator of the Year'</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-md">Recognized for our revolutionary soil-testing kit that provides instant results via mobile app.</p>
+<div class="mt-auto pt-sm flex items-center text-primary font-label-md text-label-md">
+                                Read Article <span class="material-symbols-outlined ml-xs text-[18px]">chevron_right</span>
+</div>
+</div>
+</article>
+<!-- Large Horizontal Feature -->
+<article class="md:col-span-2 bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col md:flex-row soil-shadow group cursor-pointer">
+<div class="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
+<img alt="Training Session" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A modern agricultural warehouse where local farmers are being trained on new digital tools. The space is bright and airy with large windows, showing a professional and clean environment. People are gathered around a central display, reflecting a sense of community resilience and education in the heart of rural India's tech revolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPmcKqjCS9vCthrm468BUneULAOMM-7vb94VGVrX26X6t6C8zoBlLVf20SyQfBLYXKGiEhe5AmUM0b14OYMryhMF5AUDI1JwMxFZH1nEmYDccnTRtft4MB7dNG7WRZGqCjjfyMqQ4cd5IRfeBH7kUgHPI_Uk92HS5uvzGrQYkC2hJqg3THQ6q3iDN-6sGijaaT2Jnyuvms3N_mG1hOs7qQrsn8bk3TMCGccNJeWRiQIcFjaaDzndTpVL6Xvyf-W1aNgIn2a5NwF0EU"/>
+</div>
+<div class="md:w-1/2 p-lg flex flex-col justify-center">
+<div class="flex gap-sm mb-sm">
+<span class="text-secondary font-label-md text-caption uppercase tracking-wider">Community</span>
+<span class="text-on-surface-variant font-caption text-caption">Oct 15, 2024</span>
+</div>
+<h3 class="font-h2 text-h2 text-primary mb-md group-hover:text-secondary transition-all duration-300 ease-in-out">10,000 Farmers Trained in Digital Literacy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Our partnership with local NGOs has successfully bridged the gap between traditional wisdom and modern mobile management tools.</p>
+<div class="flex items-center text-primary font-label-md text-label-md">
+                                Read Full Story <span class="material-symbols-outlined ml-xs text-[18px]">chevron_right</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- Farming Tips Sidebar -->
+<aside class="lg:col-span-4">
+<div class="mb-lg border-b border-outline-variant pb-base">
+<h2 class="font-h2 text-h2 text-primary">Farming Tips</h2>
+</div>
+<div class="space-y-md">
+<!-- Tip Card 1 -->
+<div class="bg-surface-container-low p-md rounded-lg border border-outline-variant hover:border-secondary transition-all duration-300 ease-in-out cursor-pointer group">
+<div class="bg-secondary-container/20 w-fit p-xs rounded-full mb-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">water_drop</span>
+</div>
+<h4 class="font-label-md text-h3 text-primary mb-xs group-hover:text-secondary">Optimal Watering Times for Rabi Crops</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">Learn why early morning irrigation reduces fungal risks and water evaporation by up to 30%.</p>
+<div class="flex items-center gap-xs text-secondary-fixed-dim font-label-md text-label-md">
+                            Read Guide <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</div>
+</div>
+<!-- Tip Card 2 -->
+<div class="bg-surface-container-low p-md rounded-lg border border-outline-variant hover:border-secondary transition-all duration-300 ease-in-out cursor-pointer group">
+<div class="bg-secondary-container/20 w-fit p-xs rounded-full mb-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">bug_report</span>
+</div>
+<h4 class="font-label-md text-h3 text-primary mb-xs group-hover:text-secondary">Organic Pest Control Methods</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">Natural alternatives to chemical pesticides using Neem and Garlic extracts for sustainable farming.</p>
+<div class="flex items-center gap-xs text-secondary-fixed-dim font-label-md text-label-md">
+                            Read Guide <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</div>
+</div>
+<!-- Tip Card 3 -->
+<div class="bg-surface-container-low p-md rounded-lg border border-outline-variant hover:border-secondary transition-all duration-300 ease-in-out cursor-pointer group">
+<div class="bg-secondary-container/20 w-fit p-xs rounded-full mb-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<h4 class="font-label-md text-h3 text-primary mb-xs group-hover:text-secondary">Maximizing Yield with Intercropping</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">Strategies for planting Legumes with Cereals to naturally enhance soil nitrogen levels.</p>
+<div class="flex items-center gap-xs text-secondary-fixed-dim font-label-md text-label-md">
+                            Read Guide <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</div>
+</div>
+<!-- CTA Sidebar -->
+<div class="bg-primary p-lg rounded-lg text-on-primary soil-shadow mt-xl">
+<h4 class="font-h3 text-h3 mb-sm">Ask Our Experts</h4>
+<p class="font-body-md text-body-md opacity-80 mb-lg">Have a specific farming challenge? Our agronomists are here to help you grow better.</p>
+<button class="w-full bg-secondary-container text-on-secondary-container py-md rounded-lg font-label-md text-label-md hover:bg-secondary-fixed transition-all">Submit a Question</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex justify-center gap-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all duration-300 ease-in-out font-label-md">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all duration-300 ease-in-out font-label-md">3</button>
+<span class="flex items-center px-xs">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all duration-300 ease-in-out font-label-md">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-xl pb-lg bg-primary dark:bg-on-primary-fixed border-t border-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin max-w-[1280px] mx-auto">
+<div class="flex flex-col gap-sm">
+<div class="font-h3 text-h3 font-bold text-primary-fixed dark:text-primary-fixed-dim">Neermal Green</div>
+<p class="font-body-md text-body-md text-on-primary/80 dark:text-primary-fixed-dim/80">Cultivating Sustainable Futures for Rural India. Our mission is to bridge technology and agriculture.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-primary uppercase tracking-widest">Navigation</h4>
+<div class="flex flex-col gap-xs">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/">Home</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/about.html">About</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/services.html">Services</a>
+<a class="font-body-md text-body-md text-secondary-fixed font-bold" href="/blog.html">Blog</a>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-primary uppercase tracking-widest">Company</h4>
+<div class="flex flex-col gap-xs">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/products.html">Products</a>
+
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/contact.html">Contact</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/">Farmers Welfare Program</a>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-primary uppercase tracking-widest">Connect</h4>
+<div class="flex gap-md">
+<a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-primary/80 hover:text-secondary-fixed-dim transition-all duration-300 ease-in-out" href="/"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+<div class="mt-xl pt-lg border-t border-primary-container max-w-[1280px] mx-auto px-margin text-center">
+<p class="font-caption text-caption text-on-primary/60">© 2024 Neermal Green. Cultivating Sustainable Futures for Rural India.</p>
+</div>
+</footer>
+</body></html>
